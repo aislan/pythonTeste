@@ -21,7 +21,5 @@ avaliador.avalia(leilao)
 print(f'Maior lance: {avaliador.maior_lance}')
 print(f'Menor lance: {avaliador.menor_lance}')
 
-
-
 print('teste')
 print('teste')
