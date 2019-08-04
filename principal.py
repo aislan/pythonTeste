@@ -13,7 +13,7 @@ leilao.lances.append(lance_da_aline)
 
 
 for lance in leilao.lances:
-	print(f'{lance.usuario.nome} deu lance de {lance.valor}')
+	print(f'O {lance.usuario.nome} deu lance de {lance.valor}')
 
 avaliador = Avaliador()
 avaliador.avalia(leilao)
@@ -21,5 +21,3 @@ avaliador.avalia(leilao)
 print(f'Maior lance: {avaliador.maior_lance}')
 print(f'Menor lance: {avaliador.menor_lance}')
 
-print('teste')
-print('teste')
