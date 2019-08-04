@@ -45,4 +45,24 @@ class TestAvaliador(TestCase):
         self.assertEqual(menor_valor_esperado, avaliador.menor_lance)
         self.assertEqual(maior_valor_esperado, avaliador.maior_lance)
 
+    def test_deve_retornar_marior_e_menor_lance_igual_quando_tiver_apenas_um_lance(self):
+        aislan = Usuario('Aislan')
+        aline = Usuario('Aline')
+
+        lance_do_aislan = Lance(aislan,100.00)
+
+        leilao = Leilao('bolo')
+
+        leilao.lances.append(lance_do_aislan)
+        
+        avaliador = Avaliador()
+        avaliador.avalia(leilao)
+
+        menor_valor_esperado = 100.00
+        maior_valor_esperado = 100.00
+
+        self.assertEqual(menor_valor_esperado, avaliador.menor_lance)
+        self.assertEqual(maior_valor_esperado, avaliador.maior_lance)
+       
+
 
