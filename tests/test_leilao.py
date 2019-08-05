@@ -66,13 +66,13 @@ class TestLeilao(TestCase):
         self.assertEqual(menor_valor_esperado, self.leilao.menor_lance)
         self.assertEqual(maior_valor_esperado, self.leilao.maior_lance)
     
-    #se não houver nenhum lance deve aceitar um novo lance
+
     def test_se_nao_houve_nenhum_lance_deve_aceitar_um_novo_lance(self):
         self.leilao.propoe(self.lance_do_aislan)
         quantidade_de_lances = len(self.leilao.lances)
         self.assertEqual(1,quantidade_de_lances)
 
-    #se já houver um lance deve aceitar um outro lance de outro usuário
+
     def test_se_ja_houve_um_lance_deve_aceitar_um_outro_lance_de_outro_usuario(self):
         aline = Usuario("Aline")
         lance_da_aline = Lance(aline,200)
@@ -84,7 +84,7 @@ class TestLeilao(TestCase):
 
         self.assertEqual(2,quantidade_de_lances)
 
-    #se já houve um lande um usuário o próximo lance não deve ser do mesmo usuário
+ 
     def test_se_ja_houve_um_lance_de_um_usuario_o_proximo_lance_nao_deve_ser_do_mesmo_usuario(self):
         aislan = self.aislan
         lance_do_aislan = Lance(aislan,300)
